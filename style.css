@@ -1,0 +1,212 @@
+:root {
+    --primary-color: #0a192f;
+    --secondary-color: #172a45;
+    --accent-color: #ffc107;
+    --text-color: #ccd6f6;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+#fireworks-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background: rgba(0,0,0,0.2);
+}
+
+header h1 {
+    font-size: 4em;
+    color: var(--accent-color);
+    margin: 0;
+    font-weight: 700;
+    text-shadow: 0 0 15px var(--accent-color);
+}
+
+header p {
+    font-size: 1.5em;
+    color: #8892b0;
+}
+
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+section {
+    background-color: var(--secondary-color);
+    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5em;
+    color: var(--accent-color);
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Countdown Timer */
+#timer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.time-box {
+    background: var(--primary-color);
+    padding: 20px;
+    border-radius: 5px;
+    min-width: 100px;
+}
+
+.time-box span {
+    display: block;
+    font-size: 3em;
+    font-weight: bold;
+    color: white;
+}
+
+.time-box p {
+    margin: 0;
+    font-size: 1em;
+    color: #8892b0;
+}
+
+/* Gallery Styles */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--accent-color);
+}
+
+/* Lightbox Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 5px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    color: #8892b0;
+}
+
+/* Add this to your existing style.css */
+
+#college-section {
+    background-color: var(--primary-color); /* Darker background for distinction */
+    border: 2px solid var(--accent-color);
+    padding: 40px;
+    margin-top: 50px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(255, 193, 7, 0.5); /* Glowing effect */
+    opacity: 0; /* Initially hidden for scroll reveal */
+    transform: translateY(50px); /* Initially moved down for animation */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Smooth transition */
+}
+
+#college-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.college-logo {
+    max-width: 150px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 50%; /* If you want a circular logo */
+    box-shadow: 0 0 15px rgba(255, 193, 7, 0.7);
+}
+
+#college-section h3 {
+    color: white;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+#college-section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    color: #e0e0e0;
+}
+
+.btn-next-page {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+}
+
+.btn-next-page:hover {
+    background-color: #e6b300; /* Slightly darker yellow on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 193, 7, 0.4);
+}
