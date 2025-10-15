@@ -1,3 +1,4 @@
+
 // 'DOMContentLoaded' wrapper hata diya gaya hai kyunki hum HTML me 'defer' attribute ka use kar rahe hain.
 
 const card = document.querySelector('.card');

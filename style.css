@@ -210,3 +210,200 @@ footer {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(255, 193, 7, 0.4);
 }
+
+/* --- Code for the new Fixed Button --- */
+
+.btn-fixed-bottom {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.btn-fixed-bottom.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* --- Styles for the QR Code Modal --- */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1001; /* Sit on top of everything else */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7); /* Black background with transparency */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content Box */
+.modal-content {
+    background-color: #fefefe;
+    color: #333;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    animation-name: zoomIn;
+    animation-duration: 0.3s;
+}
+
+/* The Close Button (x) */
+.close-btn {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+}
+
+/* Add a zoom-in animation */
+@keyframes zoomIn {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+/* ======================================================= */
+/* STYLES FOR NEW CONTENT SECTIONS */
+/* ======================================================= */
+
+/* General container for the cards */
+.info-card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+    margin-top: 30px;
+}
+
+/* Individual card styling */
+.info-card {
+    background-color: #1f4068; /* Using a color from your theme */
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 193, 7, 0.2);
+    flex-basis: 300px; /* Base width for each card */
+    flex-grow: 1;
+    max-width: 350px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.info-card h3 {
+    color: #ffc107; /* Your theme's accent color */
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+.info-card p {
+    color: #c0c0c0;
+    line-height: 1.6;
+}
+
+/* Styling for the safety tips list */
+#safety-section {
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.safety-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.safety-list li {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-left: 4px solid #ff0707; /* Accent color border */
+    transition: background-color 0.3s ease;
+}
+
+.safety-list li:hover {
+    background-color: rgba(255, 193, 7, 0.1);
+}
+
+/* ======================================================= */
+/* STYLES FOR INTERACTIVE CARDS & DETAILS MODAL */
+/* ======================================================= */
+
+/* Make the interactive cards look clickable */
+.info-card.interactive {
+    cursor: pointer;
+}
+
+/* Styles for the Details Modal */
+#details-modal .modal-content {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    /* Animation */
+    animation-name: slideIn;
+    animation-duration: 0.5s;
+
+    max-height: 85vh; 
+    overflow-y: auto;
+}
+
+#details-modal #modal-img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#details-modal #modal-title {
+    color: #d32f2f; /* A festive red color */
+    margin-bottom: 15px;
+    font-size: 2em;
+}
+
+#details-modal #modal-description {
+    font-size: 1.1em;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* Modal animation keyframes */
+@keyframes slideIn {
+    from {
+        top: -200px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
