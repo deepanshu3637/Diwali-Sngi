@@ -7,7 +7,7 @@ const minutesEl = document.getElementById('minutes');
 const secondsEl = document.getElementById('seconds');
 
 // Step 2: Set the CORRECT Diwali date (October 20, 2025, at midnight)
-const diwaliDate = new Date("October 20, 2025 12:00:00"); // <-- यहाँ तारीख ठीक कर दी गई है
+const diwaliDate = new Date("October 20, 2025 00:00:00"); // <-- यहाँ तारीख ठीक कर दी गई है
 
 // This variable will hold our timer
 let countdownInterval;
@@ -175,4 +175,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
 
